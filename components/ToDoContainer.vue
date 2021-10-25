@@ -7,6 +7,7 @@
         :key="todo.id"
         :task="todo"
         :remove-task="removeTask"
+        :mark-as-completed="markAsCompleted"
       />
       <div class="p-2">
         <input
@@ -36,12 +37,17 @@ export default {
   methods: {
     addTask(task) {
       // use date as id
-      const newTask = { name: task, id: Date.now() }
+      const newTask = { name: task, id: Date.now(), completed: false }
       this.tasks = [...this.tasks, newTask]
     },
     removeTask(task) {
       // filter by id
       this.tasks = this.tasks.filter((item) => item.id !== task.id)
+    },
+    markAsCompleted(task) {
+      const completedTask = { ...task, completed: true }
+      const filteredTasks = this.tasks.filter((item) => item.id !== task.id)
+      this.tasks = [...filteredTasks, completedTask]
     },
   },
 }
