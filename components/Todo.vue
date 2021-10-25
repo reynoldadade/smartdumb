@@ -1,6 +1,8 @@
 <!-- Please remove this file from your project -->
 <template>
-  <div class="w-full p-2 rounded flex justify-between border border-gray-400">
+  <div
+    class="w-full p-2 rounded flex justify-between border border-gray-400 m-2"
+  >
     <span>
       {{ task.name }}
     </span>

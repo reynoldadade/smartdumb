@@ -1,19 +1,22 @@
 <template>
-  <div class="w-1/2 shadow p-2 rounded border">
-    <ToDoComponent
-      v-for="todo in tasks"
-      :key="todo.id"
-      :task="todo"
-      :remove-task="removeTask"
-    />
-    <div class="p-2">
-      <input
-        v-model="task"
-        type="text"
-        class="w-full h-full p-2 border rounded border-blue-300"
-        placeholder="Enter task here"
-        @keydown.enter="addTask(task)"
+  <div class="w-1/2">
+    <div class="p-2 font-semibold">Smart vs Dumb components</div>
+    <div class="w-full shadow p-2 rounded border">
+      <ToDoComponent
+        v-for="todo in tasks"
+        :key="todo.id"
+        :task="todo"
+        :remove-task="removeTask"
       />
+      <div class="p-2">
+        <input
+          v-model="task"
+          type="text"
+          class="w-full h-full p-2 border rounded border-blue-300"
+          placeholder="Enter task here"
+          @keydown.enter="addTask(task)"
+        />
+      </div>
     </div>
   </div>
 </template>
