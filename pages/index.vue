@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full p-10">
+  <div class="w-full p-10 flex justify-center">
     <ToDoContainer />
   </div>
 </template>

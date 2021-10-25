@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full">
+  <div class="w-1/2 shadow p-2 rounded border">
     <ToDoComponent
       v-for="todo in tasks"
       :key="todo.id"
@@ -10,7 +10,7 @@
       <input
         v-model="task"
         type="text"
-        class="w-full h-full p-2"
+        class="w-full h-full p-2 border rounded border-blue-300"
         placeholder="Enter task here"
         @keydown.enter="addTask(task)"
       />

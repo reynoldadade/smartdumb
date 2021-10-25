@@ -1,11 +1,13 @@
 <!-- Please remove this file from your project -->
 <template>
-  <div class="w-full p-2 rounded flex justify-between">
+  <div class="w-full p-2 rounded flex justify-between border border-gray-400">
     <span>
       {{ task.name }}
     </span>
     <span>
-      <button class="text-red-500"><i class="fas fa-trash"></i></button>
+      <button class="text-red-500" @click.prevent="removeTask(task)">
+        <i class="fas fa-trash"></i>
+      </button>
     </span>
   </div>
 </template>
