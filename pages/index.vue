@@ -1,7 +1,15 @@
 <template>
-  <Tutorial/>
+  <div class="w-full p-10">
+    <ToDoContainer />
+  </div>
 </template>
 
 <script>
-export default {}
+import ToDoContainer from '~/components/ToDoContainer'
+
+export default {
+  components: {
+    ToDoContainer,
+  },
+}
 </script>
